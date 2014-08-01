@@ -16,6 +16,7 @@ compiler:
 
 script:
   - cd master
+  - ./config
   - make depend
   - make
   - make test
