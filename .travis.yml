@@ -7,6 +7,7 @@ before_script:
   - sudo apt-get install -y binutils-mingw-w64-i686
   - sudo apt-get install -y gcc-mingw-w64-i686 mingw-w64-tools
   - sudo apt-get install -y build-essential
+  - sudo apt-get install -y autopoint
 
 language: c
 
@@ -15,10 +16,10 @@ compiler:
 
 script:
   - cd master
+  - sudo update-binfmts --disable wine
   - ./config
   - ./Configure --cross-compile-prefix=i686-w64-mingw32- mingw
   - make depend
   - make
-  - echo "Cross-compiling finished!"
   - sudo update-binfmts --enable wine
   - make test
