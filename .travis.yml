@@ -16,6 +16,7 @@ compiler:
 
 script:
   - cd master
+  - unset CC
   - sudo update-binfmts --disable wine
   - ./config
   - ./Configure --cross-compile-prefix=i686-w64-mingw32- mingw
