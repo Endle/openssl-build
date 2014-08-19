@@ -23,5 +23,6 @@ script:
   - ./Configure --cross-compile-prefix=i686-w64-mingw32- mingw
   - make depend
   - make
+  - wineboot
   - sudo update-binfmts --enable wine
   - make test
