@@ -25,4 +25,5 @@ script:
   - make
   - wineboot
   - sudo update-binfmts --enable wine
+  - export WINEDEBUG=fixme-all
   - make test
