@@ -27,3 +27,7 @@ script:
   - sudo update-binfmts --enable wine
   - export WINEDEBUG=fixme-all
   - make test
+
+notifications:
+  email: false
+  slack: winezh:BE5bq4pZBesONq09c2GYqYxl
